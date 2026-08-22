@@ -142,3 +142,113 @@
     color: var(--color-foreground);
   }
 }
+
+/* ===== ACET CONSULTS brand layer ===== */
+:root {
+  --radius: 0.25rem;
+  --background: oklch(0.13 0.008 160);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.17 0.009 160);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.15 0.008 160);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.86 0.19 158);
+  --primary-foreground: oklch(0.13 0.008 160);
+  --secondary: oklch(0.2 0.008 160);
+  --secondary-foreground: oklch(0.98 0 0);
+  --muted: oklch(0.2 0.008 160);
+  --muted-foreground: oklch(0.72 0.006 160);
+  --accent: oklch(0.86 0.19 158);
+  --accent-foreground: oklch(0.13 0.008 160);
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.86 0.19 158);
+
+  --ink: oklch(0.09 0.006 160);
+  --ink-2: oklch(0.16 0.009 160);
+  --mint-soft: oklch(0.86 0.19 158 / 14%);
+  --font-display: "Bebas Neue", "Arial Narrow", sans-serif;
+  --font-sans: "Inter Tight", system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-mint: var(--primary);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --animate-drift-x: driftX 60s ease-in-out infinite alternate;
+  --animate-drift-y: driftY 42s ease-in-out infinite alternate;
+  --animate-mint-pulse: mintPulse 2.6s ease-in-out infinite;
+  --animate-rise: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-scan: scan 7s linear infinite;
+}
+
+@keyframes driftX {
+  from { transform: translate3d(-2.5%, 0, 0) scale(1.12); }
+  to { transform: translate3d(2.5%, -1.5%, 0) scale(1.2); }
+}
+@keyframes driftY {
+  from { transform: translate3d(0, 1.5%, 0) scale(1.08); opacity: 0.4; }
+  to { transform: translate3d(0, -2%, 0) scale(1.14); opacity: 0.62; }
+}
+@keyframes mintPulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 var(--mint-soft); }
+  50% { opacity: 0.55; box-shadow: 0 0 0 6px transparent; }
+}
+@keyframes rise {
+  from { opacity: 0; transform: translate3d(0, 22px, 0); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes scan {
+  from { transform: translate3d(0, -100%, 0); }
+  to { transform: translate3d(0, 900%, 0); }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+@utility display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+@utility eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+@utility mint-rule {
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  height: 1px;
+  opacity: 0.5;
+}
+@utility reveal {
+  opacity: 0;
+  transform: translate3d(0, 26px, 0);
+  transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1);
+  &[data-shown="true"] { opacity: 1; transform: none; }
+}
+
+:where(a, button, input):focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
