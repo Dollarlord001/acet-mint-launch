@@ -358,6 +358,7 @@ function Index() {
           <p className="reveal mt-6 text-sm text-muted-foreground sm:text-base">
             The next chapter is being built.
           </p>
+          <Countdown />
           <div className="reveal mt-12 grid gap-px bg-border sm:grid-cols-3">
             {[
               ["Brand & identity", "Complete"],
