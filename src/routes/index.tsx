@@ -7,6 +7,7 @@ import workspaceAsset from "@/assets/acet-workspace.jpg.asset.json";
 import matrixAsset from "@/assets/acet-matrix.jpg.asset.json";
 import { useRevealRoot } from "@/components/acet/useReveal";
 import { Waitlist } from "@/components/acet/Waitlist";
+import { Countdown } from "@/components/acet/Countdown";
 
 const TITLE = "ACET Consults — Opportunity is Everywhere. Trust Shouldn't Be.";
 const DESC =
@@ -357,6 +358,7 @@ function Index() {
           <p className="reveal mt-6 text-sm text-muted-foreground sm:text-base">
             The next chapter is being built.
           </p>
+          <Countdown />
           <div className="reveal mt-12 grid gap-px bg-border sm:grid-cols-3">
             {[
               ["Brand & identity", "Complete"],
