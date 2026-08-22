@@ -77,7 +77,7 @@ function Index() {
           <img
             src={vrAsset.url}
             alt=""
-            className="h-full w-full origin-top-right scale-[1.45] object-cover object-[62%_10%] opacity-32 mix-blend-screen animate-[rise_1.4s_cubic-bezier(0.16,1,0.3,1)_both] sm:scale-[1.55] sm:opacity-60"
+            className="h-full w-full origin-top-right scale-[1.12] object-cover object-[62%_18%] opacity-32 mix-blend-screen animate-[rise_1.4s_cubic-bezier(0.16,1,0.3,1)_both] sm:scale-[1.18] sm:opacity-60"
             style={{
               maskImage: "radial-gradient(75% 70% at 62% 38%, #000 40%, transparent 86%)",
               WebkitMaskImage: "radial-gradient(75% 70% at 62% 38%, #000 40%, transparent 86%)",
