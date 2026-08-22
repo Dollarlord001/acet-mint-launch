@@ -7,6 +7,7 @@ import workspaceAsset from "@/assets/acet-workspace.jpg.asset.json";
 import matrixAsset from "@/assets/acet-matrix.jpg.asset.json";
 import { useRevealRoot } from "@/components/acet/useReveal";
 import { Waitlist } from "@/components/acet/Waitlist";
+import { Countdown } from "@/components/acet/Countdown";
 
 const TITLE = "ACET Consults — Opportunity is Everywhere. Trust Shouldn't Be.";
 const DESC =
