@@ -77,7 +77,7 @@ function Index() {
           <img
             src={vrAsset.url}
             alt=""
-            className="h-full w-full object-cover object-[62%_22%] opacity-40 mix-blend-screen animate-[rise_1.4s_cubic-bezier(0.16,1,0.3,1)_both] sm:opacity-65"
+            className="h-full w-full object-cover object-[62%_22%] opacity-25 mix-blend-screen sm:opacity-60 animate-[rise_1.4s_cubic-bezier(0.16,1,0.3,1)_both]"
             style={{
               maskImage: "radial-gradient(75% 70% at 62% 38%, #000 40%, transparent 86%)",
               WebkitMaskImage: "radial-gradient(75% 70% at 62% 38%, #000 40%, transparent 86%)",
@@ -87,16 +87,16 @@ function Index() {
         {/* legibility scrim above imagery */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_top,var(--ink)_18%,color-mix(in_oklab,var(--ink)_72%,transparent)_55%,transparent_100%)] sm:bg-[linear-gradient(to_right,var(--ink)_10%,color-mix(in_oklab,var(--ink)_70%,transparent)_55%,transparent_100%)]"
+          className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_top,var(--ink)_38%,color-mix(in_oklab,var(--ink)_82%,transparent)_62%,transparent_100%)] sm:bg-[linear-gradient(to_right,var(--ink)_10%,color-mix(in_oklab,var(--ink)_70%,transparent)_55%,transparent_100%)]"
         />
 
 
-        <nav className="relative mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-6 sm:px-10">
+        <nav className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-6 sm:px-10">
           <span className="display text-2xl tracking-[0.18em]">ACET</span>
           <StatusDot label="System status · Building" />
         </nav>
 
-        <div className="relative mx-auto mt-auto w-full max-w-7xl px-5 pb-16 sm:px-10 sm:pb-24">
+        <div className="relative z-10 mx-auto mt-auto w-full max-w-7xl px-5 pb-16 sm:px-10 sm:pb-24">
           <p className="eyebrow animate-[rise_0.7s_cubic-bezier(0.16,1,0.3,1)_0.1s_both]">
             ACET Consults / Launching October 2026
           </p>
