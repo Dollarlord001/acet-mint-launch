@@ -72,20 +72,24 @@ function Index() {
         {/* VR subject */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-[92%] max-w-3xl sm:w-[72%] lg:w-[55%]"
+          className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-[105%] max-w-3xl sm:w-[72%] lg:w-[55%]"
         >
           <img
             src={vrAsset.url}
             alt=""
-            className="h-full w-full object-cover object-[60%_25%] opacity-70 mix-blend-screen animate-[rise_1.4s_cubic-bezier(0.16,1,0.3,1)_both]"
+            className="h-full w-full object-cover object-[62%_22%] opacity-40 mix-blend-screen animate-[rise_1.4s_cubic-bezier(0.16,1,0.3,1)_both] sm:opacity-65"
             style={{
-              maskImage:
-                "radial-gradient(75% 70% at 62% 42%, #000 45%, transparent 88%)",
-              WebkitMaskImage:
-                "radial-gradient(75% 70% at 62% 42%, #000 45%, transparent 88%)",
+              maskImage: "radial-gradient(75% 70% at 62% 38%, #000 40%, transparent 86%)",
+              WebkitMaskImage: "radial-gradient(75% 70% at 62% 38%, #000 40%, transparent 86%)",
             }}
           />
         </div>
+        {/* legibility scrim above imagery */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(to_top,var(--ink)_18%,color-mix(in_oklab,var(--ink)_72%,transparent)_55%,transparent_100%)] sm:bg-[linear-gradient(to_right,var(--ink)_10%,color-mix(in_oklab,var(--ink)_70%,transparent)_55%,transparent_100%)]"
+        />
+
 
         <nav className="relative mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-6 sm:px-10">
           <span className="display text-2xl tracking-[0.18em]">ACET</span>
