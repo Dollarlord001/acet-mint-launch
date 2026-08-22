@@ -72,18 +72,19 @@ function Index() {
         {/* VR subject */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-[105%] max-w-3xl sm:w-[72%] lg:w-[55%]"
+          className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-[105%] max-w-3xl overflow-hidden sm:w-[72%] lg:w-[55%]"
         >
           <img
             src={vrAsset.url}
             alt=""
-            className="h-full w-full object-cover object-[62%_22%] opacity-25 mix-blend-screen sm:opacity-60 animate-[rise_1.4s_cubic-bezier(0.16,1,0.3,1)_both]"
+            className="h-full w-full origin-top-right scale-[1.45] object-cover object-[62%_10%] opacity-32 mix-blend-screen animate-[rise_1.4s_cubic-bezier(0.16,1,0.3,1)_both] sm:scale-[1.55] sm:opacity-60"
             style={{
               maskImage: "radial-gradient(75% 70% at 62% 38%, #000 40%, transparent 86%)",
               WebkitMaskImage: "radial-gradient(75% 70% at 62% 38%, #000 40%, transparent 86%)",
             }}
           />
         </div>
+
         {/* legibility scrim above imagery */}
         <div
           aria-hidden
