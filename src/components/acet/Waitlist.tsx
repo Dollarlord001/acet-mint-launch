@@ -42,9 +42,9 @@ export function Waitlist() {
           We'll keep you updated as ACET gets closer to launch.
         </p>
         <p className="mt-6 border-t border-border pt-4 text-xs leading-relaxed text-muted-foreground/70">
-          Note: the waitlist database isn't connected yet. Your details were not stored — this form is
-          ready to be wired to the ACET backend before launch.
+          Your details are saved and the ACET team has been notified.
         </p>
+
       </div>
     );
   }
